@@ -1,0 +1,288 @@
+<!-- ====================================================================== -->
+<!--                                 CRUD LIST                              -->
+<!-- ====================================================================== -->
+
+
+
+<!doctype html>
+
+<html>
+<!-- ====================================================================== -->
+<!-- ================================ HEAD ================================ -->
+<!-- ====================================================================== -->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="YOYOWORKOUT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- ---------------------------------- -->
+    <!-- BASE SITE URL                      -->
+    <!-- ---------------------------------- -->
+    <base href=".">
+
+<!-- ====================================================================== -->
+<!-- CSS FILES                                                              -->
+<!-- ====================================================================== -->
+
+    <!-- ---------------------------------- -->
+    <!-- BOOTSTRAP                          -->
+    <!-- ---------------------------------- -->
+    <link rel="stylesheet" href="/static/libs/bootstrap/current/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/libs/bootstrap/current/themes/bootstrap-lightgrey.min.css">
+
+    <!-- ---------------------------------- -->
+    <!-- FONTAWESOME                        -->
+    <!-- ---------------------------------- -->
+    <link rel="stylesheet" href="/static/libs/fontawesome/current/css/all.min.css">
+
+    <!-- ---------------------------------- -->
+    <!-- APP STYLES                         -->
+    <!-- ---------------------------------- -->
+    <link rel="stylesheet" href="/static/app/css/app.css">
+    
+    
+    <title>
+        List of records
+    </title>
+    
+</head>
+<!-- ====================================================================== -->
+<!-- ================================ BODY ================================ -->
+<!-- ====================================================================== -->
+<body>
+
+<!-- ====================================================================== -->
+<!-- HEADER                                                                 -->
+<!-- ====================================================================== -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary shadow-sm">
+        <a class="navbar-brand" href="/">
+            <h3>My super site ...</h3>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item"> </li>
+                <li class="nav-item"> </li>
+                <li class="nav-item"> </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a class="btn btn-dark my-2 my-sm-0" href="/admin" role="button">Administration</a>
+            </form>
+        </div>
+
+    </nav>
+    
+</header>
+
+
+
+<br>
+<main>
+<div class="container">
+<!-- ====================================================================== -->
+<!-- MAIN : START                                                           -->
+<!-- ====================================================================== -->
+
+
+<!-- ====================================================================== -->
+<!-- TOOLBAR : TOP                                                          -->
+<!-- ====================================================================== -->
+<div class="btn-toolbar justify-content-between rounded" role="toolbar">
+
+
+<!-- ---------------------------------- -->
+<!-- LEFT                               -->
+<!-- ---------------------------------- -->
+
+    <div class="btn-group" role="group"><!--INFO -->
+        <span class="btn btn-outline-dark">
+            <b>List of &nbsp; : {{model_display_name}} </b>
+        </span>
+    </div>
+
+
+
+
+<!-- ---------------------------------- -->
+<!-- RIGHT                              -->
+<!-- ---------------------------------- -->
+    <div class="btn-group" role="group">
+        <a class="btn btn-info my-wdth-200" href="create">
+            Add new
+        </a>
+    </div>
+
+</div>
+
+<hr>
+
+<!-- ====================================================================== -->
+<!-- TABLE                                                                  -->
+<!-- ====================================================================== -->
+<table class="table table-bordered table-sm table-hover shadow">
+
+<!-- ---------------------------------- -->
+<!-- THEAD                              -->
+<!-- ---------------------------------- -->
+  <thead>
+    <tr class="table-info">
+      <th scope="col">#</th>
+      <th scope="col">Code</th>
+      <th scope="col">Caption</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+
+<!-- ---------------------------------- -->
+<!-- TBODY                              -->
+<!-- ---------------------------------- -->
+  <tbody>
+
+    <tr>
+      <th scope="row"><a href="#">{{ obj.id }}</a></th>
+      <td>{{ obj.code }}</td>
+      <td>{{ obj.caption }}</td>
+      <td>{{ obj.description }}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#">{{ obj.id }}</a></th>
+      <td>{{ obj.code }}</td>
+      <td>{{ obj.caption }}</td>
+      <td>{{ obj.description }}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#">{{ obj.id }}</a></th>
+      <td>{{ obj.code }}</td>
+      <td>{{ obj.caption }}</td>
+      <td>{{ obj.description }}</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="#">{{ obj.id }}</a></th>
+      <td>{{ obj.code }}</td>
+      <td>{{ obj.caption }}</td>
+      <td>{{ obj.description }}</td>
+    </tr>
+<!--  IF EMPTY : NO RECORD FOUND
+    <tr>
+      <th scope="row">0</th>
+      <td colspan="3">No record found !</td>
+    </tr>
+-->
+  </tbody>
+
+
+</table>
+
+
+<hr>
+<!-- ====================================================================== -->
+<!-- TOOLBAR : BOTTOM                                                       -->
+<!-- ====================================================================== -->
+<div class="btn-toolbar  justify-content-between rounded" role="navbar">
+
+<!-- ---------------------------------- -->
+<!-- LEFT : ACTIONS                     -->
+<!-- ---------------------------------- -->
+    <div class="dropdown">
+      <a class="btn btn-outline-primary dropdown-toggle" href="#"
+         role="button" id="dropdownMenuLink"
+         data-toggle="dropdown"
+         aria-haspopup="true"
+         aria-expanded="false">
+        Actions on list
+      </a>
+
+      <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#">Advanced search</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Printable version</a>
+        <a class="dropdown-item" href="#">Export PDF</a>
+        <a class="dropdown-item" href="#">Export CSV</a>
+
+      </div>
+    </div>
+
+<!-- ---------------------------------- -->
+<!-- MIDDLE : PAGINATION                -->
+<!-- ---------------------------------- -->
+    <div class="btn-group" role="group">
+        <ul>
+
+            <li class="btn btn-info">
+                <a class="text-white" href="#">
+                    <span class="fas fa-arrow-left"></span>
+                </a>
+            </li>
+
+            <li class="btn">
+                XX / XX
+            </li>
+
+            <li class="btn btn-info">
+                <a class="text-white" href="#">
+                    <span class="fas fa-arrow-right"></span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+<!-- ---------------------------------- -->
+<!-- RIGHT : SEARCH                     -->
+<!-- ---------------------------------- -->
+    <div class="input-group mb-3">
+        <!--
+      <div class="input-group-prepend">
+        <span class="input-group-text">?</span>
+      </div>
+      -->
+      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <div class="input-group-append">
+          <button type="button" class="btn btn-outline-primary">Find</button>
+      </div>
+    </div>
+
+</div>
+
+
+
+
+<!-- ====================================================================== -->
+<!-- MAIN : STOP                                                            -->
+<!-- ====================================================================== -->
+</div>
+</main>
+
+
+<!-- ====================================================================== -->
+<!-- FOOTER                                                                 -->
+<!-- ====================================================================== -->
+<footer></footer>
+
+
+
+<!-- ====================================================================== -->
+<!-- JS FILES                                                               -->
+<!-- ====================================================================== -->
+
+<!-- ---------------------------------- -->
+<!-- JQUERY AND POPPER                  -->
+<!-- ---------------------------------- -->
+<script src="/static/libs/jquery/current/jquery.min.js" type="text/javascript"></script>
+<script src="/static/libs/popper/current/popper.min.js" type="text/javascript"></script>
+
+<!-- ---------------------------------- -->
+<!-- BOOTSTRAP                          -->
+<!-- ---------------------------------- -->
+<script src="/static/libs/bootstrap/current/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- ---------------------------------- -->
+<!-- APP SCRIPTS                        -->
+<!-- ---------------------------------- -->
+<script src="/static/app/js/app.js" type="text/javascript"></script>
+
+<!-- ====================================================================== -->
+<!-- ================================ END  ================================ -->
+<!-- ====================================================================== -->
+</body>
+</html>

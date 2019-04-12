@@ -1,0 +1,93 @@
+{# ========================================================================= #}
+{#                           MESSAGE FEEDBACK COMPONENT                      #}
+{# ========================================================================= #}
+{% for message in messages %}
+
+
+
+
+{# ========================================================================= #}
+{# DEBUG                                                                     #}
+{# ========================================================================= #}
+{% if message.level == 10 %}
+<div class="alert alert-dark  alert-dismissible shadow-sm fade show" role="alert">
+    <strong>Debug</strong>
+    <hr>
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %}
+
+
+
+{# ========================================================================= #}
+{# INFO                                                                      #}
+{# ========================================================================= #}
+{% if message.level == 20 %}
+<div class="alert alert-info  alert-dismissible shadow-sm fade show" role="alert">
+    <strong>Info !</strong>
+    <hr>
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %}
+
+
+
+{# ========================================================================= #}
+{# SUCCESS                                                                   #}
+{# ========================================================================= #}
+{% if message.level == 25 %}
+    <div class="alert alert-success  alert-dismissible shadow-sm fade show" role="alert">
+    <strong>Success !</strong>
+    <hr>
+    {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+{% endif %}
+
+
+
+{# ========================================================================= #}
+{# WARNING                                                                   #}
+{# ========================================================================= #}
+{% if message.level == 30 %}
+<div class="alert alert-warning  alert-dismissible shadow-sm fade show" role="alert">
+    <strong>Warning !</strong>
+    <hr>
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %}
+
+
+{# ========================================================================= #}
+{# ERROR                                                                     #}
+{# ========================================================================= #}
+{% if message.level == 40 %}
+<div class="alert alert-danger alert-dismissible shadow-sm fade show" role="alert">
+    <strong>Error</strong>
+    <hr>
+    {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endif %}
+
+
+
+
+
+
+
+
+{% endfor %}

@@ -1,0 +1,50 @@
+{# ========================================================================= #}
+{#                            PROJECT HOME PAGE                              #}
+{# ========================================================================= #}
+{% extends "app/app_base.html" %}
+
+
+
+
+{% block title %}Welcome{% endblock %}
+
+
+{% block content %}
+<div class="container">
+
+<br><br><br>
+
+<div class="row">
+    <div class="col"> </div>
+
+<div class="col-8">
+    <div class="jumbotron">
+        <h1 class="display-4 text-primary font-weight-bold">Bienvenue</h1>
+            <p class="lead">Ce site est le point d'entrée sur notre blog.</p>
+        <hr class="my-4">
+            <p>
+            <i>
+            Vous pouvez ajouter des articles et commenter ceux des autres. <br>
+            Notez toutefois que l'administrateur du site se réserve le droit d'éffacer sans préavis des commentaires inappropriés.
+            </i>
+            </p>
+        <div class="clearfix">
+            <a class="btn btn-primary btn-lg" href="{% url 'app_theme' %}" role="button">Visiter les themes</a>
+        </div>
+
+
+    </div>
+
+            <hr>
+            <a href="{% url 'demo_category_list' %}" class="btn btn-outline-primary"> Liste des catégories</a>
+            <a href="{% url 'demo_catgory_create' %}" class="btn btn-outline-primary"> Créer une catégories</a>
+
+
+</div>
+
+
+    <div class="col"> </div>
+</div>
+
+</div>
+{% endblock %}

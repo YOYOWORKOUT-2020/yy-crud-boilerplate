@@ -1,0 +1,207 @@
+<!-- ====================================================================== -->
+<!--                               CRUD CREATE                              -->
+<!-- ====================================================================== -->
+
+
+
+<!doctype html>
+
+<html>
+<!-- ====================================================================== -->
+<!-- ================================ HEAD ================================ -->
+<!-- ====================================================================== -->
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="YOYOWORKOUT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!-- ---------------------------------- -->
+    <!-- BASE SITE URL                      -->
+    <!-- ---------------------------------- -->
+    <base href=".">
+
+<!-- ====================================================================== -->
+<!-- CSS FILES                                                              -->
+<!-- ====================================================================== -->
+
+    <!-- ---------------------------------- -->
+    <!-- BOOTSTRAP                          -->
+    <!-- ---------------------------------- -->
+    <link rel="stylesheet" href="/static/libs/bootstrap/current/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/libs/bootstrap/current/themes/bootstrap-lightgrey.min.css">
+
+    <!-- ---------------------------------- -->
+    <!-- FONTAWESOME                        -->
+    <!-- ---------------------------------- -->
+    <link rel="stylesheet" href="/static/libs/fontawesome/current/css/all.min.css">
+
+    <!-- ---------------------------------- -->
+    <!-- APP STYLES                         -->
+    <!-- ---------------------------------- -->
+    <link rel="stylesheet" href="/static/app/css/app.css">
+
+
+    <title>
+        Create
+    </title>
+
+</head>
+<!-- ====================================================================== -->
+<!-- ================================ BODY ================================ -->
+<!-- ====================================================================== -->
+<body>
+
+<!-- ====================================================================== -->
+<!-- HEADER                                                                 -->
+<!-- ====================================================================== -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary shadow-sm">
+        <a class="navbar-brand" href="/">
+            <h3>My super site ...</h3>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item"> </li>
+                <li class="nav-item"> </li>
+                <li class="nav-item"> </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <a class="btn btn-dark my-2 my-sm-0" href="/admin" role="button">Administration</a>
+            </form>
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<br>
+<main>
+<div class="container">
+<!-- ====================================================================== -->
+<!-- MAIN : START                                                           -->
+<!-- ====================================================================== -->
+
+
+
+<form method="post" action=".">
+<!-- ====================================================================== -->
+<!-- FORM :START                                                            -->
+<!-- ====================================================================== -->
+
+
+<div class="card shadow">
+    <h5 class="card-header">New item : {{model_display_name}} </h5>
+
+    <!-- ---------------------------------- -->
+    <!-- MAIN VIEW INPUT                    -->
+    <!-- ---------------------------------- -->
+    <div class="card-body">
+        <p>
+            <label for="code" class="text-info">Code &starf;</label>
+            <input class="form-control" type="text" placeholder="code" id="code">
+        </p>
+        <p>
+            <label for="caption" class="text-info">Caption &starf;</label>
+            <input class="form-control" type="text" placeholder="caption" id="caption">
+        </p>
+        <p>
+            <label for="description" class="text-info">Description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
+        </p>
+    </div>
+
+    <!-- ---------------------------------- -->
+    <!-- FORM CONTROLS                      -->
+    <!-- ---------------------------------- -->
+    <div class="card-footer">
+        <div class="btn-toolbar justify-content-between rounded" role="toolbar">
+            <!-- ---------------------------------- -->
+            <!-- LEFT : ACTIONS                     -->
+            <!-- ---------------------------------- -->
+            <div class="btn-group" role="group">
+                <div class="dropdown">
+                    <a class="btn btn-outline-primary dropdown-toggle" href="#"
+                       role="button" id="dropdownMenuLink"
+                       data-toggle="dropdown"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        Other actions
+                    </a>
+
+                    <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Save and continue editing</a>
+                        <a class="dropdown-item" href="#">Save and show item</a>
+                        <a class="dropdown-item" href="#">Save and clone</a>
+                        <a class="dropdown-item" href="#">Save and new</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------------------- -->
+            <!-- RIGHT : ACTIONS                    -->
+            <!-- ---------------------------------- -->
+            <div role="group">
+                <a href="./list.html" class="btn btn-outline-primary">Cancel</a>
+                &nbsp;
+                <input type="submit" value="Enregistrer" class="btn btn-info"/>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- ====================================================================== -->
+<!-- FORM :END                                                              -->
+<!-- ====================================================================== -->
+</form>
+
+
+
+
+
+
+
+
+<!-- ====================================================================== -->
+<!-- MAIN : STOP                                                            -->
+<!-- ====================================================================== -->
+</div>
+</main>
+
+
+<!-- ====================================================================== -->
+<!-- FOOTER                                                                 -->
+<!-- ====================================================================== -->
+<footer></footer>
+
+
+
+<!-- ====================================================================== -->
+<!-- JS FILES                                                               -->
+<!-- ====================================================================== -->
+
+<!-- ---------------------------------- -->
+<!-- JQUERY AND POPPER                  -->
+<!-- ---------------------------------- -->
+<script src="/static/libs/jquery/current/jquery.min.js" type="text/javascript"></script>
+<script src="/static/libs/popper/current/popper.min.js" type="text/javascript"></script>
+
+<!-- ---------------------------------- -->
+<!-- BOOTSTRAP                          -->
+<!-- ---------------------------------- -->
+<script src="/static/libs/bootstrap/current/js/bootstrap.min.js" type="text/javascript"></script>
+
+<!-- ---------------------------------- -->
+<!-- APP SCRIPTS                        -->
+<!-- ---------------------------------- -->
+<script src="/static/app/js/app.js" type="text/javascript"></script>
+
+<!-- ====================================================================== -->
+<!-- ================================ END  ================================ -->
+<!-- ====================================================================== -->
+</body>
+</html>

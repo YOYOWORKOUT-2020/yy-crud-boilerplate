@@ -1,0 +1,55 @@
+{# ========================================================================= #}
+{#                        VIEWPART : TOOLBAR : MODEL                         #}
+{# ========================================================================= #}
+
+
+<div class="btn-toolbar" role="toolbar">
+
+
+{#-- ------------------------------ --#}
+{#-- RIGHT  						--#}
+{#-- ------------------------------ --#}
+
+    <div class="btn-group" role="group" style="float: right;">
+        <a class="btn btn-default btn-sm" style="float: right;" href="#">
+            <span class="fas fa-home"></span>&nbsp;&nbsp;
+            Go to home
+        </a>
+    </div>
+
+
+
+{#-- ------------------------------ --#}
+{#-- LEFT   						--#}
+{#-- ------------------------------ --#}
+
+    {#-- Infos --#}
+    <div class="btn-group" role="group">
+        <em>
+            <span class="fas fa-info btn-sm text-info"></span>
+            <span class="text text-info">  
+            Nom du modele&nbsp;&nbsp; :
+            </span>
+        </em>
+    </div>
+    <div class="btn-group" role="spacer" >&nbsp;&nbsp;</div>
+
+    {#-- Create --#}
+        <div class="btn-group" role="group">
+            <a class="btn btn-default btn-sm" href="create">
+                <span class="fas fa-plus"></span>
+                Nouveau
+            </a>
+        </div>
+
+
+    {#-- List --#}
+        <div class="btn-group" role="group">
+            <a class="btn btn-default btn-sm"  href="list">
+                <span class="fas fa-list"></span>
+                Liste
+            </a>
+        </div>
+
+
+</div>
